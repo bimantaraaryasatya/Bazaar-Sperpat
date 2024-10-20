@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/5e57207f98.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/output.css">
+    <style>
+        header li:hover {
+            background-color: #CA403D;
+            cursor: pointer;
+            color: #F6F7F2;
+        }
+    </style>
+    <title>Sperpat</title>
+</head>
+<body class="bg-[#F6F7F2] h-screen">
+    <header class="w-full">
+        <div class="flex justify-between items-center py-4 px-5 lg:px-20 bg-white relative">
+            <div class="flex justify-start">
+                <img src="../images/sperpat_logo.png" alt="sperpat-logo" class="w-2/3">
+            </div>
+
+            <div class="text-2xl cursor-pointer md:hidden" id="burger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <nav class="hidden md:block">
+                <ul class="nav-menu md:flex gap-0 lg:gap-8">
+                    <a href=""><li class="text-lg font-semibold py-2 px-5 rounded-sm transition-all duration-200 ease-in-out">Beranda</li></a>
+                    <a href=""><li class="text-lg font-semibold py-2 px-5 rounded-sm transition-all duration-200 ease-in-out">Mentawai</li></a>
+                    <a href=""><li class="text-lg font-semibold py-2 px-5 rounded-sm transition-all duration-200 ease-in-out">Subbet</li></a>
+                    <a href=""><li class="text-lg font-semibold py-2 px-5 rounded-sm transition-all duration-200 ease-in-out">Menu</li></a>
+                </ul>
+            </nav>
+
+            <ul id="mobile-menu" class=" flex flex-col absolute top-full left-0 right-0 bg-white shadow-md md:hidden">
+                <a href=""><li class="text-base lg:text-lg font-semibold py-6 px-5 rounded-sm transition-all duration-200 ease-in-out">Beranda</li></a>
+                <a href=""><li class="text-base lg:text-lg font-semibold py-6 px-5 rounded-sm transition-all duration-200 ease-in-out">Mentawai</li></a>
+                <a href=""><li class="text-base lg:text-lg font-semibold py-6 px-5 rounded-sm transition-all duration-200 ease-in-out">Subbet</li></a>
+                <a href=""><li class="text-base lg:text-lg font-semibold py-6 px-5 rounded-sm transition-all duration-200 ease-in-out">Menu</li></a>
+            </ul>
+        </div>
+    </header>
+
+    <script>
+        document.getElementById('burger-menu').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
